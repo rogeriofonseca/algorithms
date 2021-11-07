@@ -13,4 +13,15 @@ public class SelectionSort {
 
         return cheaperIndex;
     }
+
+    public static Products[] swapPositions(Products[] products, int positionA, int positionB) {
+
+        Products produtoA = products[positionA];
+        Products produtoB = products[positionB];
+        products[positionA]  = produtoB;
+        products[positionB]  = produtoA;
+
+        return products;
+    }
+
 }
