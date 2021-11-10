@@ -10,7 +10,8 @@ public class SelectionSortTest {
 
     @Test
     @DisplayName("It should find the smallest price.")
-    void findSmallets(){
+    void findSmallest(){
+        int indexExpected = 3;
         Products[] products = {
             new Products("TV", 900.00),
             new Products("Notebook", 1200.00),
@@ -18,9 +19,10 @@ public class SelectionSortTest {
             new Products("HD Case", 80.90)
         };
 
-        int smallest = SelectionSort.findSmallest(products);
-        int indexExpected = 3;
+        int smallest = SelectionSort.findSmallest(products, 0, products.length - 1);
+
         assertEquals(indexExpected, smallest);
+        assertEquals("HD Case", products[smallest].getModel());
     }
 
     @Test

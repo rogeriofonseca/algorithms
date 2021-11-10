@@ -16,6 +16,10 @@ public class Products {
         return this.price;
     }
 
+    public String getModel() {
+        return this.model;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == this)
