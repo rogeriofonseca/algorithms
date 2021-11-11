@@ -19,7 +19,7 @@ public class SelectionSortTest {
             new Products("TV", 900.00),
             new Products("Notebook", 1200.00),
             new Products("Tablet", 450.00),
-            new Products("HD Case", 80.90)
+            new Products("HD Case", 80.90) // Smallest price
         };
 
         int smallest = SelectionSort.findSmallest(products, 0, products.length - 1);
