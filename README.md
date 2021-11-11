@@ -73,6 +73,34 @@ Algorithms implementation using TDD.
 
 ![Selection Sort gif](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
 
+### :pushpin: [Insertion Sort](https://en.wikipedia.org/wiki/Selection_sort)
+
+**Business Rules:**
+1. [Reordering from insertion.](https://github.com/rogeriofonseca/algorithms/blob/6a7e2e9e1c94e8a052bdb7e728b1773559ce1295/src/test/java/br/com/rogeriofonseca/algorithms/InsertionSortTest.java#L10)
+```Java
+    @Test
+    @DisplayName("Should swap positions")
+    void swapPostions(){
+        Products[] products = {
+            new Products("TV", 900.00),
+            new Products("Notebook", 1200.00),
+            new Products("Tablet", 450.00),
+            new Products("HD Case", 80.90),
+        };
+
+        Products[] expectedProductsSwaped = {
+            new Products("HD Case", 80.90), // Notebook - swaped
+            new Products("Tablet", 450.00),
+            new Products("TV", 900.00),
+            new Products("Notebook", 1200.00), // HD Case - swaped
+        };
+
+        InsertionSort.sort(products);
+        assertArrayEquals(expectedProductsSwaped, products);
+    }
+```
+
+![Insertion Sort gif](https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif)
 
 ### Requirements:
 - [**Maven**](https://maven.apache.org/install.html) :gear:
